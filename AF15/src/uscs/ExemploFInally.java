@@ -12,10 +12,9 @@ public class ExemploFInally {
             int divisor = s.nextInt();
             if (divisor == 0) {
                 throw new Exception("Divisor não pode ser zero.");
-            } else {
-                int resultado = dividendo / divisor;
-                System.out.println("Resultado da divisão de " + dividendo + " por " + divisor + " é: " + resultado);
             }
+            int resultado = dividendo / divisor;
+            System.out.println("Resultado da divisão de " + dividendo + " por " + divisor + " é: " + resultado);
 
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
