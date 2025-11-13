@@ -13,14 +13,13 @@ public class ExemploFInally {
             if (divisor == 0) {
                 throw new Exception("Divisor não pode ser zero.");
             }
-            int resultado = dividendo / divisor;
-            System.out.println("Resultado da divisão de " + dividendo + " por " + divisor + " é: " + resultado);
+            System.out.println("Resultado da divisão de " + dividendo + " por " + divisor + " é: " + (dividendo / divisor));
 
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
         } finally {
             s.close();
-            System.out.println("Scanner fechado. Fim do programa.");
+            System.out.println("Bloco finally.");
         }
     }
 }

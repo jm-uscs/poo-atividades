@@ -3,25 +3,16 @@ package uscs;
 import java.util.Scanner;
 
 public class ExemploTryCatch {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        try{
+        try {
             System.out.print("Digite um número inteiro: ");
-            int n1 = s.nextInt();
+            int numero1 = s.nextInt();
             System.out.print("Digite um número inteiro: ");
-            int n2 = s.nextInt();
-            System.out.println(n1 + " + " + n2 + " = " + (n1 + n2));
-            System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
-        }
-       catch(ArithmeticException e){
-            System.out.println("Erro: Divisão por zero não é permitida.");
-        }
-        catch(Exception e){
-            System.out.println("Erro: Entrada inválida. Por favor, digite números inteiros.");
-        }
-        finally {
-            s.close();
-            System.out.println("Scanner fechado. Fim do programa.");
+            int numero2 = s.nextInt();
+            System.out.println(numero1 + " + " + numero2 + " = " + (numero1 + numero2));
+        } catch (Exception ex) {
+            System.out.println("ERRO - Valor digitado não é um número inteiro!");
         }
 
     }
